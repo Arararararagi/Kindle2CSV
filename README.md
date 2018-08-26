@@ -3,6 +3,12 @@ Queries Kindle's vocab.db to create a CSV with definitions from Jisho (JMdict, K
 
 Change VocabDB and CSVOutput variables and run. Tested with python 3.7, but should work with any version of python 3.
 
+Kindle's word separator can be crappy at times (as you have probably noticed while looking up), so check the results before importing.
+
+## You need to enable vocabulary builder first on your kindle
+More info [here](https://www.amazon.com/gp/help/customer/display.html?nodeId=201733850).
+
+## Output
 Columns order:
 * Stem (what kindle used to lookup in the dictionary)
 * Original word
