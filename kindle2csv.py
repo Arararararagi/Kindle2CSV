@@ -54,7 +54,6 @@ def getvocab(search):
     #with page as data_file:
     data = json.loads(page)
     #print(len(data))
-    data = data["data"][0]
 
     word = ""
     reading = ""
@@ -62,7 +61,11 @@ def getvocab(search):
 
     #### Just in case it doesn't find the word
     try:
-        word = data["japanese"][0]["word"]
+        data = data["data"][0]
+        try:
+            word = data["japanese"][0]["word"]
+        except:
+            pass
         reading = data["japanese"][0]["reading"]
         definitions = ", ".join(data["senses"][0]["english_definitions"])
         print("word", word)
@@ -81,5 +84,5 @@ with open(CSVOutput, "w", encoding="utf-8") as outputfile:
     for lookup in vocab:
         #print stem, lookup and source sentence
         print(lookup[0], lookup[1], lookup[2])
-        definitions = getvocab(lookup[0])
+        definitions = getvocab(lookup[1])
         outputwriter.writerow(list(lookup) + definitions)
