@@ -10,10 +10,10 @@ import csv
 #
 
 #VocabDB
-VocabDB = "/home/teclas/Documents/Japanese/Kindle/vocab.db"
+VocabDB = "/path/to/vocab.db"
 
-#CSV file
-CSVOutput = "/home/teclas/Documents/Japanese/Kindle/vocab.csv"
+#CSV output file
+CSVOutput = "/path/to/vocab.csv"
 
 
 #
